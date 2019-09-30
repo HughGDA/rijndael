@@ -392,9 +392,9 @@ def rijndael_cipher(plain_text_matrix, extended_key, rounds):
 	return encrypted_text
 
 def main():
-	plain_text_matrix = [[['32','88','31','E0'],['43','5A','31','37'],['F6','30','98','07'],['A8','8D','A2','34']]]#plain_text_interpret(input('Please input phrase to be encrypted: '))
+	plain_text_matrix = plain_text_interpret(input('Please input phrase to be encrypted: '))
 	print('')
-	cipher_key = [['2B','28','AB','09'],['7E','AE','F7','CF'],['15','D2','15','4F'],['16','A6','88','3C']]#to_matrix_array(key_interpret(input('Please input the cipher key (16 characters),\nor type \'random\' for a randomly generated key (which will be printed).\nIf the key is too short it will be padded on the left with zeroes,\ntoo long and it will be truncated with the end removed: ')))
+	cipher_key = to_matrix_array(key_interpret(input('Please input the cipher key (16 characters),\nor type \'random\' for a randomly generated key (which will be printed).\nIf the key is too short it will be padded on the left with zeroes,\ntoo long and it will be truncated with the end removed: ')))
 	print('')
 	print('Plain Text Matrix:')
 	for row in range(len(plain_text_matrix[0])):
